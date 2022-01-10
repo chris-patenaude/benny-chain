@@ -1,3 +1,4 @@
+const {SHA256} = require("crypto-js");
 class Block {
 	/**
 	 * Data structure outlining the basic component of a block chain
@@ -44,11 +45,20 @@ class Block {
 	static mineBlock(lastBlock, data) {
 		const timestamp = Date.now();
 		const lastHash = lastBlock.hash;
-		const hash = "TODO - HASH";
+		const hash = Block.hash(timestamp, lastHash, data);
 
 		return new this(timestamp, lastHash, hash, data);
 	}
 
+	/**
+	 * Generates an SHA-256 hash value based off of provided params
+	 * @param {string} timestamp 
+	 * @param {string} lastHash 
+	 * @param {*} data 
+	 */
+	static hash(timestamp, lastHash, data) {
+		return SHA256(`${timestamp}${lastHash}${data}`).toString();
+	}
 }
 
 module.exports = Block;
