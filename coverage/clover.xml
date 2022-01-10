@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1641841068258" clover="3.2.0">
-  <project timestamp="1641841068258" name="All files">
-    <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5" elements="18" coveredelements="18" complexity="0" loc="13" ncloc="13" packages="1" files="1" classes="1"/>
-    <file name="Block.js" path="/Users/patenauc/Repos/astro-chain/Block.js">
+<coverage generated="1641843116433" clover="3.2.0">
+  <project timestamp="1641843116433" name="All files">
+    <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7" elements="26" coveredelements="26" complexity="0" loc="19" ncloc="19" packages="1" files="2" classes="2"/>
+    <file name="Block.js" path="/Users/patenauc/Repos/benny-chain/Block.js">
       <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="11" count="6" type="stmt"/>
-      <line num="12" count="6" type="stmt"/>
-      <line num="13" count="6" type="stmt"/>
-      <line num="14" count="6" type="stmt"/>
+      <line num="1" count="2" type="stmt"/>
+      <line num="11" count="9" type="stmt"/>
+      <line num="12" count="9" type="stmt"/>
+      <line num="13" count="9" type="stmt"/>
+      <line num="14" count="9" type="stmt"/>
       <line num="21" count="1" type="stmt"/>
-      <line num="32" count="3" type="stmt"/>
-      <line num="46" count="3" type="stmt"/>
-      <line num="47" count="3" type="stmt"/>
-      <line num="48" count="3" type="stmt"/>
-      <line num="50" count="3" type="stmt"/>
-      <line num="60" count="3" type="stmt"/>
-      <line num="64" count="1" type="stmt"/>
+      <line num="32" count="5" type="stmt"/>
+      <line num="46" count="4" type="stmt"/>
+      <line num="47" count="4" type="stmt"/>
+      <line num="48" count="4" type="stmt"/>
+      <line num="50" count="4" type="stmt"/>
+      <line num="60" count="4" type="stmt"/>
+      <line num="64" count="2" type="stmt"/>
+    </file>
+    <file name="Blockchain.js" path="/Users/patenauc/Repos/benny-chain/Blockchain.js">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
