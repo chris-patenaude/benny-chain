@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The printStr() function Should print out a text description of an individual instance 1`] = `
+"Block - 
+		Timestamp: foo
+		Last Hash: bar...
+		Hash     : zoo...
+		Data     : baz"
+`;
