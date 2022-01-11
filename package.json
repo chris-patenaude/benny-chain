@@ -1,17 +1,17 @@
 {
-  "name": "astro-chain",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "test": "jest --coverage",
-    "test-serve": "jest --coverage --watchAll"
-  },
-  "devDependencies": {
-    "jest": "^27.4.7",
-    "nodemon": "^2.0.15"
-  },
-  "dependencies": {
-    "crypto-js": "^4.1.1"
-  }
+    "name": "benny-chain",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "test": "jest --coverage",
+        "test-serve": "jest --coverage --watchAll"
+    },
+    "devDependencies": {
+        "jest": "^27.4.7",
+        "nodemon": "^2.0.15"
+    },
+    "dependencies": {
+        "crypto-js": "^4.1.1"
+    }
 }
