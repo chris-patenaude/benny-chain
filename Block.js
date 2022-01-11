@@ -30,9 +30,9 @@ class Block {
 	 */
 	static genesis() {
 		return new this(
-			"Genesis Time",
-			'------------',
-			'f1r57-h45h',
+			1641801600000,
+			'---',
+			'genesis-20221001',
 			[]
 		)
 	}
@@ -58,6 +58,15 @@ class Block {
 	 */
 	static hash(timestamp, lastHash, data) {
 		return SHA256(`${timestamp}${lastHash}${data}`).toString();
+	}
+
+	/**
+	 * Creates a hash for an already created block
+	 * @param {Block} block The block to be hashed
+	 */
+	static blockHash(block) {
+		const {timestamp, lastHash, data} = block;
+		return this.hash(timestamp, lastHash, data);
 	}
 }
 

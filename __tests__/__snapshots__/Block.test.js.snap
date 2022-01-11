@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Block class Should generate a new block with a hash based on the previous block 1`] = `"bd20ada7f05cd956f9844abebca214d821de51c1197d75cf2725b276e7df2b3e"`;
+exports[`The Block class Should generate a new block with a hash based on the previous block 1`] = `"6a7698f2aafc9e42f21d19c2cb47199a235c191ab2f9b72aea876750ac27a077"`;
 
 exports[`The Block class Should print out a text description of an individual instance 1`] = `
 "Block - 
 		Timestamp: 123456789
-		Last Hash: f1r57-h45h...
-		Hash     : bd20ada7f0...
+		Last Hash: genesis-20...
+		Hash     : 6a7698f2aa...
 		Data     : 1,2,3"
 `;
