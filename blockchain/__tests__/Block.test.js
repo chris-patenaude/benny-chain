@@ -1,4 +1,4 @@
-const Block = require("../Block");
+const Block = require("../block");
 const NOW = 123456789;
 const CREATION = 1641801600000;
 

@@ -1,5 +1,5 @@
 TN:
-SF:Block.js
+SF:blockchain/block.js
 FN:10,(anonymous_0)
 FN:20,(anonymous_1)
 FN:31,(anonymous_2)
@@ -35,7 +35,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:Blockchain.js
+SF:blockchain/index.js
 FN:7,(anonymous_0)
 FN:15,(anonymous_1)
 FN:25,(anonymous_2)
