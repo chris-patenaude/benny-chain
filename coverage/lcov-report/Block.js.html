@@ -131,11 +131,7 @@
 <a name='L66'></a><a href='#L66'>66</a>
 <a name='L67'></a><a href='#L67'>67</a>
 <a name='L68'></a><a href='#L68'>68</a>
-<a name='L69'></a><a href='#L69'>69</a>
-<a name='L70'></a><a href='#L70'>70</a>
-<a name='L71'></a><a href='#L71'>71</a>
-<a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<a name='L69'></a><a href='#L69'>69</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -145,10 +141,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -166,7 +162,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -176,25 +185,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -207,86 +198,83 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span></td><td class="text"><pre class="prettyprint lang-js">const {SHA256} = require("crypto-js");
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const { SHA256 } = require("crypto-js");
 class Block {
-	/**
-	 * Data structure outlining the basic component of a block chain
-	 * @param {string} timestamp The time the block was created
-	 * @param {string} lastHash Hash value of the previous block in the chain
-	 * @param {string} hash Hash value of the current block
-	 * @param {*} data Data stored in the current block
-	 */
-	constructor(timestamp, lastHash, hash, data) {
-		this.timestamp = timestamp;
-		this.lastHash = lastHash;
-		this.hash = hash;
-		this.data = data;
-	}
+    /**
+     * Data structure outlining the basic component of a block chain
+     * @param {string} timestamp The time the block was created
+     * @param {string} lastHash Hash value of the previous block in the chain
+     * @param {string} hash Hash value of the current block
+     * @param {*} data Data stored in the current block
+     */
+    constructor(timestamp, lastHash, hash, data) {
+        this.timestamp = timestamp;
+        this.lastHash = lastHash;
+        this.hash = hash;
+        this.data = data;
+    }
 &nbsp;
-	/**
-	 * A string representation of a block instance
-	 */
-	toString() {
-		return `Block - 
+    /**
+     * A string representation of a block instance
+     */
+    toString() {
+        return `Block - 
 		Timestamp: ${this.timestamp}
-		Last Hash: ${this.lastHash.substring(0,10)}...
-		Hash     : ${this.hash.substring(0,10)}...
+		Last Hash: ${this.lastHash.substring(0, 10)}...
+		Hash     : ${this.hash.substring(0, 10)}...
 		Data     : ${this.data}`;
-	}
+    }
 &nbsp;
-	/**
-	 * Creates the first block (i.e. Genesis block) in the blockchain
-	 */
-	static genesis() {
-		return new this(
-			1641801600000,
-			'---',
-			'genesis-20221001',
-			[]
-		)
-	}
+    /**
+     * Creates the first block (i.e. Genesis block) in the blockchain
+     */
+    static genesis() {
+        return new this(1641801600000, "---", "genesis-20221001", []);
+    }
 &nbsp;
-	/**
-	 * Creates the next block in the chain based on the previously last block
-	 * @param {Block} lastBlock Reference to the last block
-	 * @param {*} data Data to be stored in new block
-	 */
-	static mineBlock(lastBlock, data) {
-		const timestamp = Date.now();
-		const lastHash = lastBlock.hash;
-		const hash = Block.hash(timestamp, lastHash, data);
+    /**
+     * Creates the next block in the chain based on the previously last block
+     * @param {Block} lastBlock Reference to the last block
+     * @param {*} data Data to be stored in new block
+     */
+    static mineBlock(lastBlock, data) {
+        const timestamp = Date.now();
+        const lastHash = lastBlock.hash;
+        const hash = Block.hash(timestamp, lastHash, data);
 &nbsp;
-		return new this(timestamp, lastHash, hash, data);
-	}
+        return new this(timestamp, lastHash, hash, data);
+    }
 &nbsp;
-	/**
-	 * Generates an SHA-256 hash value based off of provided params
-	 * @param {string} timestamp 
-	 * @param {string} lastHash 
-	 * @param {*} data 
-	 */
-	static hash(timestamp, lastHash, data) {
-		return SHA256(`${timestamp}${lastHash}${data}`).toString();
-	}
+    /**
+     * Generates an SHA-256 hash value based off of provided params
+     * @param {string} timestamp
+     * @param {string} lastHash
+     * @param {*} data
+     */
+    static hash(timestamp, lastHash, data) {
+        return SHA256(`${timestamp}${lastHash}${data}`).toString();
+    }
 &nbsp;
-	/**
-	 * Creates a hash for an already created block
-	 * @param {Block} block The block to be hashed
-	 */
-	static blockHash(block) {
-		const {timestamp, lastHash, data} = block;
-		return this.hash(timestamp, lastHash, data);
-	}
+    /**
+     * Creates a hash for an already created block
+     * @param {Block} block The block to be hashed
+     */
+    static blockHash(block) {
+        const { timestamp, lastHash, data } = block;
+        return this.hash(timestamp, lastHash, data);
+    }
 }
 &nbsp;
-module.exports = Block;</pre></td></tr></table></pre>
+module.exports = Block;
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Jan 11 2022 08:54:09 GMT-0800 (Pacific Standard Time)
+                at Tue Jan 11 2022 10:01:35 GMT-0800 (Pacific Standard Time)
             </div>
         <script src="prettify.js"></script>
         <script>
