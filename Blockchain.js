@@ -31,6 +31,21 @@ class Blockchain {
         }
         return true;
     }
+
+    /**
+     * Replaces the current chain with a valid longer chain
+     * @param {Block[]} newChain Chain to replace current chain
+     */
+    replaceChain(newChain) {
+        if (newChain.length <= this.chain.length) {
+            throw new Error("Rejected: Incoming chain must be longer the current chain");
+        }
+        if (!this.isValidChain(newChain)) {
+            throw new Error("Rejected: Incoming chain is invalid");
+        }
+        console.log("Accepted: Chain replaced");
+        this.chain = newChain;
+    }
 }
 
 module.exports = Blockchain;
