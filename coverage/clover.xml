@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1641934421470" clover="3.2.0">
-  <project timestamp="1641934421470" name="All files">
+<coverage generated="1641944301508" clover="3.2.0">
+  <project timestamp="1641944301508" name="All files">
     <metrics statements="33" coveredstatements="33" conditionals="10" coveredconditionals="10" methods="10" coveredmethods="10" elements="53" coveredelements="53" complexity="0" loc="33" ncloc="33" packages="1" files="2" classes="2"/>
     <file name="block.js" path="/Users/patenauc/Repos/benny-chain/blockchain/block.js">
       <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
