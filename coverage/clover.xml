@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1642030016006" clover="3.2.0">
-  <project timestamp="1642030016006" name="All files">
-    <metrics statements="71" coveredstatements="71" conditionals="16" coveredconditionals="15" methods="17" coveredmethods="17" elements="104" coveredelements="103" complexity="0" loc="71" ncloc="71" packages="3" files="6" classes="6"/>
+<coverage generated="1642031735012" clover="3.2.0">
+  <project timestamp="1642031735012" name="All files">
+    <metrics statements="76" coveredstatements="76" conditionals="16" coveredconditionals="15" methods="20" coveredmethods="20" elements="112" coveredelements="111" complexity="0" loc="76" ncloc="76" packages="3" files="6" classes="6"/>
     <package name="benny-chain">
-      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="chain-util.js" path="/Users/patenauc/Repos/benny-chain/chain-util.js">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="11" count="4" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="27" count="243624" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
       </file>
       <file name="config.js" path="/Users/patenauc/Repos/benny-chain/config.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -39,17 +41,17 @@
         <line num="49" count="11" type="stmt"/>
         <line num="50" count="11" type="stmt"/>
         <line num="51" count="11" type="stmt"/>
-        <line num="52" count="221233" type="stmt"/>
-        <line num="53" count="221233" type="stmt"/>
-        <line num="54" count="221233" type="stmt"/>
-        <line num="55" count="221233" type="stmt"/>
+        <line num="52" count="243615" type="stmt"/>
+        <line num="53" count="243615" type="stmt"/>
+        <line num="54" count="243615" type="stmt"/>
+        <line num="55" count="243615" type="stmt"/>
         <line num="58" count="11" type="stmt"/>
-        <line num="68" count="221238" type="stmt"/>
+        <line num="68" count="243620" type="stmt"/>
         <line num="76" count="5" type="stmt"/>
         <line num="77" count="5" type="stmt"/>
-        <line num="86" count="221235" type="stmt"/>
-        <line num="87" count="221235" type="cond" truecount="2" falsecount="0"/>
-        <line num="88" count="221235" type="stmt"/>
+        <line num="86" count="243617" type="stmt"/>
+        <line num="87" count="243617" type="cond" truecount="2" falsecount="0"/>
+        <line num="88" count="243617" type="stmt"/>
         <line num="92" count="2" type="stmt"/>
       </file>
       <file name="index.js" path="/Users/patenauc/Repos/benny-chain/blockchain/index.js">
@@ -75,29 +77,32 @@
       </file>
     </package>
     <package name="benny-chain.wallet">
-      <metrics statements="17" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <metrics statements="20" coveredstatements="20" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
       <file name="index.js" path="/Users/patenauc/Repos/benny-chain/wallet/index.js">
-        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
-        <line num="6" count="4" type="stmt"/>
-        <line num="7" count="4" type="stmt"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
       </file>
       <file name="transaction.js" path="/Users/patenauc/Repos/benny-chain/wallet/transaction.js">
-        <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="18" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="18" count="5" type="cond" truecount="2" falsecount="0"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="22" count="3" type="stmt"/>
-        <line num="24" count="3" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
       </file>
     </package>
   </project>

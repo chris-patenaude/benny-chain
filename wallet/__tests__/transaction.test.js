@@ -25,4 +25,8 @@ describe("The Transaction class", () => {
         amount = Infinity;
         expect(() => Transaction.newTransaction(wallet, recipient, amount)).toThrowError();
     });
+
+    it("Should input the balance of the wallet", () => {
+        expect(transaction.input.amount).toEqual(wallet.balance);
+    });
 });
