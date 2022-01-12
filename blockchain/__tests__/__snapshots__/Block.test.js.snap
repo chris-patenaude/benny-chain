@@ -1,12 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Block class Should generate a new block with a valid hash and nonce value 1`] = `"000644a58c6dd323b2e9a6c652fe43ac21d5f82c51c28939dbe45f474098efa5"`;
-
 exports[`The Block class Should print out a text description of an individual instance 1`] = `
 "Block - 
-		Timestamp: 1641801600000
-		Last Hash: ---...
-		Hash     : genesis-20...
-		Nonce    : 0
-		Data     : "
+		Timestamp  : 1641801600000
+		Last Hash  : ---...
+		Hash       : genesis-20...
+		Nonce      : 0
+		Difficulty : 3
+		Data       : "
 `;

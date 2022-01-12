@@ -1,4 +1,3 @@
-const { DIFFICULTY } = require("../../config");
 const Block = require("../block");
 const NOW = 123456789;
 const CREATION = 1641801600000;
@@ -9,6 +8,7 @@ describe("The Block class", () => {
         jest.spyOn(global.Date, "now").mockImplementation(() => NOW);
         data = [1, 2, 3];
         genesisBlock = Block.genesis();
+        block = Block.mineBlock(genesisBlock, data);
     });
     it("Should print out a text description of an individual instance", () => {
         expect(genesisBlock.toString()).toMatchSnapshot();
@@ -20,11 +20,15 @@ describe("The Block class", () => {
         expect(genesisBlock.timestamp).toEqual(CREATION);
     });
     it("Should generate a new block with a valid hash and nonce value", () => {
-        block = Block.mineBlock(genesisBlock, data);
         expect(block.data).toEqual(data);
-        expect(block.hash).toMatchSnapshot();
         expect(block.lastHash).toEqual(genesisBlock.hash);
         expect(block.timestamp).toEqual(NOW);
-        expect(block.hash.substring(0, DIFFICULTY)).toEqual("0".repeat(DIFFICULTY));
+        expect(block.hash.substring(0, block.difficulty)).toEqual("0".repeat(block.difficulty));
+    });
+    it("Should lower the difficulty for slowly mined blocks", () => {
+        expect(Block.adjustDifficulty(block, Infinity)).toEqual(block.difficulty - 1);
+    });
+    it("Should raise the difficulty for quickly mined blocks", () => {
+        expect(Block.adjustDifficulty(block, block.timestamp + 1)).toEqual(block.difficulty + 1);
     });
 });
