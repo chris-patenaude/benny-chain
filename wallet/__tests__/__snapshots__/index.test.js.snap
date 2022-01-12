@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Wallet class Should print a string representation of the wallet 1`] = `
+"Wallet - 
+		Public Key: 0464f4b76ecb23c049cc66fc5f5cf6c60b96b856fdc80277ceb1ef62cecef7049c17d5b9fe4a1268190b7371516d5a2d77438a8b59fd1a88ae4e368e95c9666525
+		Public Key: 500"
+`;
