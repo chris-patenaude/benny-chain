@@ -64,10 +64,17 @@ class P2PServer {
         });
     }
 
+    /**
+     * Send the current blockchain to the peer socket
+     * @param {Websocket} socket the peer's socket
+     */
     sendChain(socket) {
         socket.send(JSON.stringify(this.blockchain.chain));
     }
 
+    /**
+     * Synchronize the peer network
+     */
     syncChains() {
         this.sockets.forEach((socket) => this.sendChain(socket));
     }
