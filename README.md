@@ -10,7 +10,7 @@ SHA Stands for:
 -   Hashing
 -   Algorithm
 
-256 References the number of bits in the hashed output value from the algorithm (32-bytes)
+256 References the number of bits in the hashed outputs value from the algorithm (32-bytes)
 
 The algorithm produces a unique 32 byte value for a given unique input.
 

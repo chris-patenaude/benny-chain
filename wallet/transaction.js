@@ -4,7 +4,26 @@ class Transaction {
     constructor() {
         this.id = ChainUtil.id();
         this.input = null;
-        this.output = [];
+        this.outputs = [];
+    }
+
+    /**
+     * Update the transaction instance with an additional output
+     * @param {Wallet} senderWallet the waller of the money sender
+     * @param {string} recipient the address of the recipient
+     * @param {number} amount the amount being sent
+     */
+    update(senderWallet, recipient, amount) {
+        const senderOutput = this.outputs.find((output) => output.address === senderWallet.publicKey);
+        if (amount > senderOutput.amount) {
+            throw new Error("Transaction Update Rejected: Amount exceeds senders balance.");
+        }
+
+        senderOutput.amount = senderOutput.amount - amount;
+        this.outputs.push({ amount, address: recipient });
+        Transaction.signTransaction(this, senderWallet);
+
+        return this;
     }
 
     /**
@@ -21,7 +40,7 @@ class Transaction {
 
         const transaction = new this();
 
-        transaction.output.push(
+        transaction.outputs.push(
             { amount: senderWallet.balance - amount, address: senderWallet.publicKey },
             { amount, address: recipient }
         );
@@ -42,6 +61,18 @@ class Transaction {
             address: senderWallet.publicKey,
             signature: senderWallet.sign(ChainUtil.hash(transaction.outputs)),
         };
+    }
+
+    /**
+     * Verifies the validity of a transaction
+     * @param {Transaction} transaction the transaction being verified
+     */
+    static verifyTransaction(transaction) {
+        return ChainUtil.verifySignature(
+            transaction.input.address,
+            transaction.input.signature,
+            ChainUtil.hash(transaction.outputs)
+        );
     }
 }
 

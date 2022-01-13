@@ -26,6 +26,16 @@ class ChainUtil {
     static hash(data) {
         return SHA256(JSON.stringify(data)).toString();
     }
+
+    /**
+     * Verifies the signature of a data hash using a public key
+     * @param {string} publicKey the public key used to decrypt the signature
+     * @param {string} signature the private key generated signature
+     * @param {string} dataHash the hashed representation of the data being signed
+     */
+    static verifySignature(publicKey, signature, dataHash) {
+        return ec.keyFromPublic(publicKey, "hex").verify(dataHash, signature);
+    }
 }
 
 module.exports = ChainUtil;
