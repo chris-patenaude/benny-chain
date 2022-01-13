@@ -20,6 +20,15 @@ class TransactionPool {
 
         this.transactions.push(transaction);
     }
+
+    /**
+     * Retrieves an existing transaction that matches
+     * the address or returns null
+     * @param {string} address the address being queried
+     */
+    existingTransaction(address) {
+        return this.transactions.find((item) => item.input.address === address);
+    }
 }
 
 module.exports = TransactionPool;
